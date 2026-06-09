@@ -1,0 +1,46 @@
+// Блок `grid` — секция с сеткой карточек, заглушкой и кнопкой «Load more».
+@use '../variables' as *;
+
+.grid {
+  // Контентная колонка макета (1230px), на узких экранах — отступ 16px по краям.
+  width: min(#{$content-width}, 100% - 32px);
+  margin-inline: auto;
+
+  // Сетка карточек. Колонки подбираются автоматически (3 → 2 → 1)
+  // без жёстких брейкпоинтов.
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: fluid(20, 30);
+  }
+
+  &__empty {
+    padding-block: fluid(40, 80);
+    text-align: center;
+    font-size: fluid(15, 18);
+    color: $color-gray;
+  }
+
+  // --- Load more ---
+  &__more {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: fluid(40, 80) auto 0;
+    padding: 0;
+    background: none;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    color: $color-load;
+    transition: color $transition;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__more-icon {
+    color: $color-accent;
+  }
+}

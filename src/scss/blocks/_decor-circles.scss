@@ -1,0 +1,18 @@
+// Блок `decor-circles` — декоративные жёлтые круги слева.
+// Позиционируется абсолютно относительно main (у него position: relative).
+@use '../variables' as *;
+
+.decor-circles {
+  position: absolute;
+  top: 687px;
+  left: 56px;
+  z-index: -1;
+  width: fluid(48, 83);
+  pointer-events: none;
+  user-select: none;
+
+  // Декор только украшает — ниже 1600px прячем (вёрстка остаётся резиновой).
+  @media (max-width: $decor-hide-max) {
+    display: none;
+  }
+}

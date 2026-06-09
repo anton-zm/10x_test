@@ -1,0 +1,14 @@
+// Блок `filters` — панель с табами (слева) и поиском (справа).
+@use '../variables' as *;
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: fluid(16, 24);
+  // Контентная колонка макета (1230px), на узких экранах — отступ 16px по краям.
+  width: min(#{$content-width}, 100% - 32px);
+  margin-inline: auto;
+  margin-bottom: fluid(32, 60);
+}

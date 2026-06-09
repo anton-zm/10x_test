@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our online courses</title>
+  <meta name="description" content="Каталог онлайн-курсов с живым поиском и фильтрацией по категориям.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+  <main class="page__main">
+    <img class="decor-dots" src="assets/decor/dots.png" alt="" aria-hidden="true">
+    <img class="decor-circles" src="assets/decor/circles.png" alt="" aria-hidden="true">
+    <img class="decor-chevrons" src="assets/decor/chevrons.png" alt="" aria-hidden="true">
+
+    <header class="header">
+      <p class="header__eyebrow">Enjoy your studying!</p>
+      <h1 class="header__title">Our online courses</h1>
+    </header>
+
+    <section class="filters" aria-label="Поиск и фильтры">
+      <nav class="tabs" aria-label="Фильтр по категориям">
+        <ul class="tabs__list"></ul>
+      </nav>
+
+      <form class="search" role="search" onsubmit="return false">
+        <input type="search"
+               class="search__input"
+               placeholder="Search course..."
+               aria-label="Search course"
+               autocomplete="off">
+        <svg class="search__icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M7 1a6 6 0 0 1 4.74 9.67l3.3 3.29a1 1 0 0 1-1.42 1.42l-3.29-3.3A6 6 0 1 1 7 1Zm0 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"
+                fill="currentColor"/>
+        </svg>
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Курсы">
+      <div class="grid__list"></div>
+
+      <p class="grid__empty" hidden>
+        Nothing found. Try another search or category.
+      </p>
+
+      <button type="button" class="grid__more">
+        <svg class="grid__more-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 5V2L8 6l4 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7Z" fill="currentColor"/>
+        </svg>
+        <span class="grid__more-text">Load more</span>
+      </button>
+    </section>
+  </main>
+
+  <script type="module" src="src/js/app.js"></script>
+</body>
+</html>

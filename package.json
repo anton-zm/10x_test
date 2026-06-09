@@ -1,0 +1,15 @@
+{
+  "name": "card-catalog",
+  "version": "1.0.0",
+  "description": "Карточный каталог курсов с живым поиском и фильтрацией по категориям. Vanilla JS + SCSS, BEM.",
+  "private": true,
+  "scripts": {
+    "start": "sass src/scss/style.scss css/style.css --no-source-map --style=expanded && serve . -l 3000",
+    "build": "sass src/scss/style.scss css/style.css --no-source-map --style=expanded",
+    "watch": "sass --watch src/scss/style.scss css/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0",
+    "serve": "^14.2.0"
+  }
+}

@@ -1,0 +1,18 @@
+// Блок `decor-dots` — декоративные жёлтые точки.
+// Позиционируется абсолютно относительно main (у него position: relative).
+@use '../variables' as *;
+
+.decor-dots {
+  position: absolute;
+  top: 50px;
+  right: -45px;
+  z-index: -1;
+  width: fluid(90, 162);
+  pointer-events: none;
+  user-select: none;
+
+  // Декор только украшает — ниже 1600px прячем (вёрстка остаётся резиновой).
+  @media (max-width: $decor-hide-max) {
+    display: none;
+  }
+}

@@ -1,0 +1,48 @@
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  margin: 0;
+  font-family: $font-family;
+  color: $color-dark;
+  background-color: $color-white;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+
+  &__main {
+    padding-top: fluid(28, 44); // верхний отступ как в макете (44px на десктопе)
+    padding-bottom: fluid(56, 100);
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x: hidden; 
+    position: relative;
+  }
+}
+
+h1,
+h3,
+p {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

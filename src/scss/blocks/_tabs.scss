@@ -1,0 +1,48 @@
+// Блок `tabs` — фильтры-категории со счётчиками.
+@use '../variables' as *;
+
+.tabs {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 2px;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: fluid(14, 16);
+    line-height: 1.5;
+    color: $color-muted;
+    background: none;
+    border: 1px solid transparent;
+    border-radius: $radius;
+    transition: color $transition, border-color $transition;
+
+    &:hover {
+      color: $color-dark;
+    }
+
+    &_active {
+      color: $color-accent;
+      border-color: $color-accent;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+
+  // Счётчик-надстрочник у названия категории.
+  &__count {
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 1;
+  }
+}

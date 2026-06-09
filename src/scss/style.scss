@@ -1,0 +1,12 @@
+// Точка входа стилей. Порядок: база → блоки.
+// Токены (variables) каждый партиал подключает самостоятельно.
+@use 'base';
+@use 'blocks/decor-dots';
+@use 'blocks/decor-circles';
+@use 'blocks/decor-chevrons';
+@use 'blocks/header';
+@use 'blocks/filters';
+@use 'blocks/grid';
+@use 'blocks/tabs';
+@use 'blocks/search';
+@use 'blocks/card';

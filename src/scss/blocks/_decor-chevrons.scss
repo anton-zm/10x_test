@@ -1,0 +1,18 @@
+// Блок `decor-chevrons` — декоративные жёлтые шевроны справа.
+// Позиционируется абсолютно относительно main (у него position: relative).
+@use '../variables' as *;
+
+.decor-chevrons {
+  position: absolute;
+  top: 1104px;
+  right: 72px;
+  z-index: -1;
+  width: fluid(48, 85);
+  pointer-events: none;
+  user-select: none;
+
+  // Декор только украшает — ниже 1600px прячем (вёрстка остаётся резиновой).
+  @media (max-width: $decor-hide-max) {
+    display: none;
+  }
+}

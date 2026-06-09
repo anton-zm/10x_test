@@ -1,0 +1,42 @@
+@use 'sass:math';
+
+// Цвета
+$color-dark: #1e212c; // заголовки, тексты карточек
+$color-gray: #787a80; // автор, разделитель
+$color-muted: #9a9ca5; // плейсхолдер, неактивные табы
+$color-price: #ff4242; // цена
+$color-accent: #ff3f3a; // активный таб (текст + рамка)
+$color-load: #424551; // подпись «Load more»
+$color-card-border: #e5e8ed;
+$color-input-border: #d7dadd;
+$color-yellow: #ffcf2d; // декоративные акценты / фон фото
+$color-white: #ffffff;
+
+// Цвета бейджей по категориям
+$badge-colors: (
+  marketing: #03cea4,
+  management: #5a87fc,
+  hr: #f89828,
+  design: #f52f6e,
+  development: #7772f1,
+);
+
+// Типографика
+$font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+
+// Скругления
+$radius: 4px;
+
+// Контентная колонка макета
+$content-width: 1230px;
+
+// Ниже этой ширины прячем декоративные элементы
+$decor-hide-max: 1600px;
+
+$transition: 0.18s ease;
+
+@function fluid($min, $max, $min-vw: 320, $max-vw: 1920) {
+  $slope: math.div($max - $min, $max-vw - $min-vw);
+  $base: $min - $slope * $min-vw;
+  @return clamp(#{$min}px, #{$base}px + #{$slope * 100}vw, #{$max}px);
+}
